@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 500;
+    line-height:1.3;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+}
+ul{
+    list-style: none;
+}
+h1,h2,h3,h4{
+    font-weight:500;
+    color:hsl(233, 26%, 24%);
+}
+h1{
+    font-size: clamp(2.5rem,4vw,4rem);
+}
+h2{
+    font-size: clamp(2rem,2.9vw,3rem);
+}
+h3{
+    padding:1.3em 0 .2rem 0;
+}
+h4{
+    font-size: clamp(1rem,1.2vw,1.4rem);
+}
+a{
+    text-decoration: none;
+    font-size:clamp(.9rem,1vw,1.2rem);
+}
+p{
+    width:100%;
+    font-size: clamp(1rem,1.2vw,1.4rem);
+    padding:1em 0 2em 0;
+}
+
+a,p{
+    color:hsl(233, 8%, 62%);
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    gap:1.5rem;
+}
+.btn{
+    padding:.7em 1.5em;
+    background: linear-gradient(to right,hsl(136, 65%, 51%),hsl(192, 70%, 51%));
+    border-radius: 20px;
+    color:white;
+    width:9.7em;
+}
+.btn:hover{
+    color:white;
+    background: linear-gradient(to right,hsl(136, 65%, 70%),hsl(192, 70%, 70%));
+}
+.wrapper{
+    width:80%;
+    margin:0 auto;
+}
+#section1,#section3{
+    background-color: hsl(0, 0%, 98%);
+}
+#section2{
+    background-color: hsl(220, 16%, 96%);
+}
+
+
+/* ==================================================== NAV ================================================ */
+nav{
+    position:fixed;
+    width:100vw;
+    top:0;
+    background-color: white;
+    z-index: 1;
+    height:4rem;
+}
+nav .wrapper{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    height:100%;
+}
+
+nav .navs{
+    display:flex;
+    justify-content: space-between;
+    flex:1;
+    align-items: center;
+}
+nav .logo{
+    width:40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+nav .navigator{
+    height:14px;
+    width:28px;
+    display:none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+nav .navigator .bar{
+    background: black;
+    width:100%;
+    border-radius: 10px;
+    height:2px;
+}
+nav ul{
+    display:flex;
+    flex-direction: row;
+    gap:1rem;
+}
+
+nav ul li{
+    padding:1.3rem 0;
+    font-weight: 500;
+}
+nav ul li:hover{
+    border-bottom: 3px solid;
+    border-color:hsl(192, 70%, 51%);
+}
+nav ul li:hover a{
+    color:black;
+    font-weight: 600;
+}
+
+/* ================================================== SECTION 1 ============================================= */
+#section1{
+    margin-top: 4rem;
+    overflow-x: hidden;
+
+}
+
+#section1 .wrapper{
+    display:flex;
+    flex-direction: row;
+    width:79rem;
+    margin-left: 8.4rem;
+}
+#section1 .content{
+    width:40%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height:100vh;
+    padding-right: 6rem;
+}
+#section1 .intro-pic{
+    width:60%;
+    background-image: url(images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-position-x: 14%;
+    background-position-y: 115%;
+}
+#section1 .intro-pic .mockup{
+    height:50rem;
+    background-image: url(images/image-mockups.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -8rem;
+    background-position-x: 5rem;  
+}
+
+/* ================================================== SECTION 2 ============================================= */
+#section2 .wrapper,#section3 .wrapper{
+    padding:5rem 0 5rem 0;
+}
+#section2{
+    margin-top: -10rem;
+}
+#section2 .box{
+    padding:1rem 0;
+}
+#section2 .info{
+    width:55%;
+
+}
+
+/* ================================================== SECTION 3 ============================================= */
+#section3 .text{
+    padding:1rem 1rem 0 1.7rem;
+    height:50%;
+}
+#section3 h2{
+    padding-bottom: 3rem;
+}
+#section3 p{
+    font-size:clamp(.8rem,.8vw,1.1rem);
+}
+
+#section3 .small{
+    padding:.5em 0;
+}
+#section3 .pic{
+    height:25rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;    
+}
+#section3 .pic img{
+    width:100%;
+    height:50%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+/* ================================================== FOOTER ============================================= */
+footer{
+    background-color: hsl(233, 26%, 24%);
+}
+footer a{
+    color:white;
+}
+footer a:hover, #section3 a h4:hover{
+    color:hsl(136, 65%, 51%);
+}
+footer .wrapper div:last-child p{
+    padding:2rem 0 0 0;
+    text-align: end;
+}
+footer .wrapper div:nth-child(2) ul,.wrapper div:nth-child(3) ul{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: .5rem;
+}
+footer ul li{
+    padding:.4rem;
+}
+footer .wrapper{
+    display:flex;
+    padding:5rem 0;
+}
+footer .foots{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+footer .wrapper div:first-of-type ul{
+    display:flex;
+    margin-top: auto;
+}
+footer .wrapper div:last-child{
+    align-items: flex-end;
+    padding-right: 1rem;
+}
+.foot-logo{
+    display: flex;
+    align-items: center;
+}
+.foot-logo p{
+    padding:0;
+    color:white;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+footer .logo{
+    background-image: url(images/logo.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    width:2.2rem;
+    height:2rem;
+}
+
+/* ================================================== CREDITS ============================================= */
+.attribution { 
+    font-size: 11px;
+    text-align: center; 
+    padding:2px 0;
+    background: linear-gradient(to left,hsl(136, 65%, 51%),hsl(192, 70%, 51%));
+}
+.attribution a {
+    font-size: 11px;
+    color: hsl(233, 26%, 24%); 
+}
+
+/* ================================================================================================================ */
+/* ==================================================== MEDIA QUERRY ============================================== */
+/* ================================================================================================================ */
+@media (max-width:900px){
+
+    .wrapper{
+        flex-direction: column;
+        width:90%;
+    }
+    .row{
+        flex-direction: column;
+    }
+
+    /* ============================================= NAV ======================================================= */
+    nav ul li{
+        padding:.5rem;
+        text-align: center;
+    }
+    nav ul a{
+        color:black;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    nav .wrapper{
+        flex-direction: row;
+        position: relative;
+    }
+    nav .navs ul{
+        flex-direction: column;
+    }
+    nav .btn{
+        display:none;
+    }
+    nav .navs{
+        display:none;
+        width:90%;
+        height:20rem;
+        padding:2rem;
+        border-radius: 10px;
+        background-color: white;
+        position:absolute;
+        left:1rem;
+        top:5rem;
+        flex-direction: column;
+        box-shadow: 0 4rem 30rem 2rem black;
+    }
+    nav .navs.active{
+        display:flex;
+    }
+
+    /* ========================================= MOBILE MENU ================================================ */
+    nav .navigator{
+        display:flex;
+        position: absolute;
+        right:1.5rem;
+        cursor:pointer;
+    }
+    .navigator span:nth-child(1){
+        transform:translate(0, 0) rotate(0deg);
+        transition: 500ms ease;
+    }
+    .navigator span:nth-child(2){
+        transform:translateX(0);
+        transition: 900ms ease;
+    }
+    .navigator span:nth-child(3){
+        transform:translate(0, 0) rotate(0deg);
+        transition: 500ms ease;
+    }
+    .navigator.is-active span:nth-child(1){
+        transform:translate(2px, 5px) rotate(135deg);
+        transition: 500ms ease;
+    }
+    .navigator.is-active span:nth-child(2){
+        transform:translate(100px);
+        transition: 500ms ease;
+    }
+    .navigator.is-active span:nth-child(3){
+        transform:translate(1px, -7.5px) rotate(-136deg);
+        transition: 500ms ease;
+    }
+    
+    /* ============================================= SECTION 1 ===================================================== */
+    #section1{
+        overflow: visible;
+    }
+    #section1 .wrapper{
+        flex-direction: column;
+        margin-left: 0;
+        width:100%;
+        margin:0 auto;
+        padding-bottom: 15rem;
+    }
+    #section1 h1{
+        text-align: center;
+    }
+    #section1 .content{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:2rem 1rem;
+        text-align: center;
+    }
+    #section1 .intro-pic{
+        width:100%;
+        background-image: url(images/bg-intro-mobile.svg);
+        background-position-y:60%;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        order:-1;
+    }
+    #section1 .intro-pic .mockup{
+        height:30rem;
+        background-image: url(images/image-mockups.png);
+        background-size: 5rem;
+        margin-top: -8.7rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: center;
+        background-position-y: 180%;
+    }
+
+    /* ============================================= SECTION 2 ===================================================== */
+    #section2{
+        text-align: center;
+    }
+    #section2 .info{
+        width:100%;
+    }
+    #section2 h2{
+        width:60%;
+        margin:0 auto;
+    }
+
+    /* ============================================= SECTION 3 ===================================================== */
+    #section3 h2{
+        text-align: center;
+    }
+    #section3 .text{
+        padding:1rem 2rem 0 2rem;
+        height:50%;
+    }
+
+    /* ============================================= FOOTER ===================================================== */
+    footer{
+        text-align: center;
+    }
+    footer .wrapper div:last-child a{
+        align-self: center;
+    }
+    footer .wrapper div:last-child p{
+        text-align: center;
+    }
+    footer .wrapper{
+        padding:3rem 0;
+    }
+    footer .wrapper div:first-of-type ul{
+        display:flex;
+        margin-top: auto;
+        align-self: center;
+    }
+    footer .wrapper div:last-child{
+        padding: 1rem 0 0 0;
+    }
+    .foot-logo{
+        width:8.5rem;
+        margin: 0 auto;
+        padding:0 0 1rem 0; 
+    }
+    footer .logo{
+        width:2.5rem;
+    }
+    
+}
+
